@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCountries } from '../../redux/slices/countrySlice';
+import { getCountries, updateList } from '../../redux/slices/countrySlice';
 
 const Home = () => {
 
@@ -27,6 +27,11 @@ const Home = () => {
         setIsOpen(!isOpen);
     };
 
+    const onFilterChange = (val) =>{
+        setSelected(val);
+        dispatch(updateList(val));
+    }
+
     const [activePage, setActivePage] = useState("All");
 
     return <div className='container vh-100 d-flex flex-column'>
@@ -47,14 +52,16 @@ const Home = () => {
                 <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item px-3">
-                            <a href="#" className={`nav-link text-dark`}>All</a>
-                            <div style={{ height: 2, backgroundColor: "grey", width: 40 }}></div>
+                            <a href="#" className={`nav-link text-dark`} onClick={()=>onFilterChange("All")}>All</a>
+                            {selected=="All" && <div style={{ height: 2, backgroundColor: "grey", width: 40 }}></div>}
                         </li>
                         <li className="nav-item px-3">
-                            <a href="#about" className={`nav-link text-dark`}>Asia</a>
+                            <a href="#about" className={`nav-link text-dark`} onClick={()=>onFilterChange("Asia")}>Asia</a>
+                            {selected=="Asia" && <div style={{ height: 2, backgroundColor: "grey", width: 50 }}></div>}
                         </li>
                         <li className="nav-item px-3">
-                            <a href="#" className={`nav-link text-dark`}>Europe</a>
+                            <a href="#" className={`nav-link text-dark`} onClick={()=>onFilterChange("Europe")}>Europe</a>
+                            {selected=="Europe" && <div style={{ height: 2, backgroundColor: "grey", width: 70 }}></div>}
                         </li>
                     </ul>
                 </div>

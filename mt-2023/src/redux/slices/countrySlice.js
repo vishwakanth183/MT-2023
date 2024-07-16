@@ -13,17 +13,26 @@ const CountrySlice = createSlice({
     name: "country",
     initialState: {
         loading: false,
+        ogList : [],
         list: [],
         error: ""
     },
     reducers: {
         updateList: (state, action) => {
-            state.list = action.payload;
+            if(action.payload!=="All")
+            {
+                state.list = state.ogList.filter((item)=>item.region==action.payload);
+            }
+            else
+            {
+                state.list = state.ogList
+            }
         },
     },
     extraReducers: (builder) => {
         builder.addCase(getCountries.fulfilled, (state, action) => {
             state.list = action.payload;
+            state.ogList = action.payload;
             state.loading = false;
             state.error = "";
         });
