@@ -69,11 +69,11 @@ const Home = () => {
                         src={item.flag}
                         className="card-img-left border border-1 rounded-start"
                         alt="..."
-                        style={{ height: 90, width: 190, objectFit:"cover" }}
+                        style={{ height: 90, width: 140, objectFit:"cover" }}
                     />
                     <div className="d-flex flex-column justify-content-start mt-2 mx-3">
                         <p className="fw-semibold">{item.name}</p>
-                        <p className="text-dark">{item.region}</p>
+                        <p className="text-dark" style={{marginTop:-15}}>{item.region}</p>
                     </div>
                 </div>
             ))}
