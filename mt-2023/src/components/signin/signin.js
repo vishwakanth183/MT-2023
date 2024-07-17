@@ -51,7 +51,6 @@ const Signin = () => {
         <div className="container d-flex justify-content-center align-items-center vh-100">
           {/* Left View */}
           <div className="col-sm-12 col-lg-6 d-flex justify-content-center">
-            {/* <div className='d-flex flex-column justify-self-end'>yupp</div> */}
             <div>
               <h3>Sign In</h3>
               <p className="mt-1">
@@ -61,8 +60,6 @@ const Signin = () => {
               <div
                 className={`${SigninStyle.signinContainer} d-flex flex-column w-400`}
               >
-                {/* <input type="email" class="form-control" placeholder='Username or email' className='mb-2 p-2' />
-                <input type="password" class="form-control" placeholder='Password' className='mt-1 p-2' /> */}
                 <input
                   type="email"
                   className={`form-control mb-2 p-2 border border-1 border-dark`}
@@ -80,9 +77,9 @@ const Signin = () => {
                   placeholder="Password"
                   value={values.password}
                   onChange={handleChange("password")}
-                  onBlur={handleBlur("passwword")}
+                  onBlur={handleBlur("password")}
                 />
-                {errors.password && (
+                {errors.password && touched.password && (
                   <div className="text-danger mb-1 mt-2">{errors.password}</div>
                 )}
 
