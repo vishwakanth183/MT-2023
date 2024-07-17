@@ -50,7 +50,7 @@ const Signin = () => {
       }) => (
         <div className="container d-flex justify-content-center align-items-center vh-100">
           {/* Left View */}
-          <div className="col-sm-12 col-lg-6 d-flex justify-content-end">
+          <div className="col-sm-12 col-lg-6 d-flex justify-content-center">
             {/* <div className='d-flex flex-column justify-self-end'>yupp</div> */}
             <div>
               <h3>Sign In</h3>
