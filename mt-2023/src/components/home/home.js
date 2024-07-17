@@ -119,7 +119,7 @@ const Home = () => {
           <div
             key={index}
             className="col d-flex flex-row border border-1 border-black p-2 shadow"
-            style={{ minWidth: "49%" }}
+            style={{ minWidth: "49%", maxWidth: "49%" }}
           >
             <img
               src={item.flag}
