@@ -6,6 +6,7 @@ import GoogleIcon from "../../assets/google.png";
 import TwitterIcon from "../../assets/fb.png";
 import LinkedInIcon from "../../assets/linkedin.png";
 import FbIcon from "../../assets/twitter.png";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Home = () => {
   // Variable to handle dispatch
@@ -43,12 +44,9 @@ const Home = () => {
           <a href="#" class="navbar-brand text-dark fw-semibold">
             Countries
           </a>
-          <button
-            type="button"
-            onClick={toggleMenu}
-            class="navbar-toggler bg-black"
-          >
-            <span class="navbar-toggler-icon" style={{ color: "black" }}></span>
+          <button type="button" onClick={toggleMenu} class="navbar-toggler">
+            {/* <span class="navbar-toggler-icon bg-black"></span> */}
+            <AiOutlineMenu color="black" />
           </button>
 
           <div
