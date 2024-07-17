@@ -83,7 +83,7 @@ const Signin = () => {
                   onBlur={handleBlur("passwword")}
                 />
                 {errors.password && (
-                  <div className="text-danger mb-1">{errors.password}</div>
+                  <div className="text-danger mb-1 mt-2">{errors.password}</div>
                 )}
 
                 <div class="form-check mt-3 d-flex align-items-center">
