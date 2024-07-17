@@ -1,0 +1,12 @@
+.itemwidth {
+  width: 49%;
+  min-width: 49%;
+  max-width: 49%;
+  /* background-color: red; */
+}
+
+@media (max-width: 600px) {
+  .itemwidth {
+    max-width: 100%;
+  }
+}

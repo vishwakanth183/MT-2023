@@ -7,6 +7,7 @@ import TwitterIcon from "../../assets/fb.png";
 import LinkedInIcon from "../../assets/linkedin.png";
 import FbIcon from "../../assets/twitter.png";
 import { AiOutlineMenu } from "react-icons/ai";
+import HomeStyle from "./home.module.css";
 
 const Home = () => {
   // Variable to handle dispatch
@@ -118,8 +119,8 @@ const Home = () => {
         {countries?.list?.map((item, index) => (
           <div
             key={index}
-            className="col d-flex flex-row border border-1 border-black p-2 shadow"
-            style={{ minWidth: "49%" }}
+            className={`col d-flex flex-row border border-1 border-black p-2 shadow ${HomeStyle.itemwidth}`}
+            // style={{ minWidth: "49%", maxWidth: "49%" }}
           >
             <img
               src={item.flag}
